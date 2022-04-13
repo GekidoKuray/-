@@ -1,0 +1,47 @@
+<script>
+			var prevScrollpos = window.pageYOffset;
+			
+			window.onscroll = function() {
+			  var currentScrollPos = window.pageYOffset;
+			  if (prevScrollpos > currentScrollPos) {
+				document.getElementById("toppan").style.top = "-20px";
+				
+			  } else {
+				document.getElementById("toppan").style.top = "-159px";
+			  }
+			  prevScrollpos = currentScrollPos;
+			 
+			}
+			function openp(){
+				document.getElementById("aside1").style.left = "-1%";
+				document.getElementById("bg-kat1").style.opacity = "0";
+				document.getElementById("bg-kat1").style.cursor = "default";
+			}
+			function closep(){
+				document.getElementById("aside1").style.left = "-17.927%";
+				document.getElementById("bg-kat1").style.opacity = "1";
+			}
+			window.onload = function(){
+				var back = document.querySelector('#backb');
+				back.onmouseout = function(){
+					document.getElementById("text").style.textDecoration = "none";
+					document.getElementById("text").style.color = "#737373";
+				}
+				back.onmouseover = function(){
+					document.getElementById("text").style.textDecoration = "line-through";
+					document.getElementById("text").style.color = "#de4e4e";
+				}
+			}
+			$(".mycarousel").jCarouselLite({
+				btnNext:".next",
+				btnPrev:".prev",
+				timeout:6500,
+				auto:1,
+				visible:1,
+				speed:1500
+				
+				
+			
+			});
+			
+			</script>
